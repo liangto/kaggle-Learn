@@ -15,7 +15,6 @@ train_X, val_X, train_y, val_y = train_test_split(x, y,random_state = 0)
 
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error
-
 forest_model=RandomForestRegressor()
 forest_model.fit(train_X,train_y)
 melb_preds=forest_model.predict(val_X)
