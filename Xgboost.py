@@ -26,3 +26,11 @@ predictions=my_model.predict(test_X)
 from sklearn.metrics import mean_absolute_error
 print("Error:" + str(mean_absolute_error(predictions,test_y)))
 
+
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import Imputer
+
+my_pipeline = make_pipeline(Imputer(), RandomForestRegressor())
+my_pipeline.fit(train_X, train_y)
+predictions = my_pipeline.predict(test_X)
