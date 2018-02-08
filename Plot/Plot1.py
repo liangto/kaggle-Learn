@@ -15,6 +15,11 @@ reviews=pd.read_csv("Plot//winemag-data_first150k.csv")
 # reviews['points'].value_counts().sort_index().plot.area()
 
 #直方图
-reviews[reviews['price'] < 200]['price'].plot.hist()
+# reviews[reviews['price'] < 200]['price'].plot.hist()
 
+# 散点图
+# reviews[reviews['price'] < 100].sample(100).plot.scatter(x='price', y='points')
+
+#热力图
+reviews[reviews['price'] < 100].plot.hexbin(x='price', y='points', gridsize=15)
 plt.show()
