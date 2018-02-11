@@ -21,3 +21,8 @@ print(review.head())
 iplot([go.Scatter(x=review.head(1000)['points'],y=review.head(1000)['price'],mode='markers')])
 plt.show()
 
+
+#%%
+from IPython.display import YouTubeVideo
+
+YouTubeVideo('wG6rdUURU-w', width=800, height=450)
