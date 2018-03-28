@@ -1,6 +1,6 @@
 import pandas as pd 
 
-melbourne_file_path='melb_data.csv'
+melbourne_file_path='ML//melb_data.csv'
 melbourne_data=pd.read_csv(melbourne_file_path)
 
 # filtered_melbourne_data=melbourne_data.dropna(axis=0)
