@@ -2,8 +2,11 @@
 
 [教程链接](https://www.kaggle.com/learn/overview)
 
-## 机器学习
+机器学习基础
 
-## 数据可视化
+数据可视化
 
-## 深度学习
+
+[学习实战](https://github.com/apachecn/MachineLearning)
+
+算法学习
