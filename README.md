@@ -1,12 +1,6 @@
-# kaggle-Learn
+# 机器学习-学习
 
-[教程链接](https://www.kaggle.com/learn/overview)
-
-机器学习基础
-
-数据可视化
+>机器学习建模基础与数据可视化, 参考 [教程链接](https://www.kaggle.com/learn/overview)
 
 
-[学习实战](https://github.com/apachecn/MachineLearning)
-
-算法学习
+>各类算法学习与理解, 参考 [算法练习](https://github.com/apachecn/MachineLearning)
