@@ -28,11 +28,20 @@ labels=test_data['d']
 def autoNorm(dataSet):
     minVals = dataSet.min(0)
     maxVals = dataSet.max(0)
+    # 极差
     ranges=maxVals-minVals
+    # -------第一种实现方式---start-------
     normDataset=zeros(shape(dataSet))
     m=dataSet.shape[0]
+    # 生成与最小值之差组成的矩阵
     normDataset=dataSet-tile(minVals,(m,1))
+    # 将最小值之差除以范围组成矩阵
     normDataset=normDataset/tile(ranges,(m,1))
+    # -------第一种实现方式---end--------
+
+    # # -------第二种实现方式---start----------
+    # normDataset = (dataSet - minvalue) / ranges
+    # # -------第二种实现方式---end---------
     return normDataset,ranges,minVals
 
 def classify0(inX, dataSet, labels, k):
