@@ -1,4 +1,5 @@
 {
     "python.linting.enabled": false,
-    "python.formatting.provider": "yapf"
+    "python.formatting.provider": "yapf",
+    "python.pythonPath": "C:\\Users\\yangyl\\Anaconda3\\python.exe"
 }
