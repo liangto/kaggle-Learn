@@ -114,6 +114,28 @@ def chooseBestFeatureToSplit(dataSet):
     print(bestFeature)
     return bestFeature
 
+
+    # 计算给定数据集的香农墒的函数
+    def calc_shannon_ent(self, data_set):
+        # 求list的长度，表示计算参与训练的数据量
+        num_entries = len(data_set)
+        # 计算分类标签label出现的次数
+        label_counts = {}
+        # the number of unique elements and their occurance
+        for featVec in data_set:
+            # 将当前实例的标签存储，即每一行数据的最后一个数据代表的是标签
+            current_label = featVec[-1]
+            # 为所有可能的分类创建字典，如果当前的健值不存在，则扩展字典并将当前健值加入
+            if current_label not in label_counts.keys():
+                label_counts[current_label] = 0
+                label_counts[current_label] += 1
+        # 对于label标签的占比，求出label标签的香农墒
+        shannon_ent = 0.0
+        for key in label_counts:
+            # 使所有类标签的发生频率计算类别出现的概率
+            prob = float(label_counts[key]) / num_entries
+            shannon_ent -= prob * math.log(prob, 2)
+
 #选择出现最多的一个结果
 def majorityCnt(classList):
     #----第一种方式-----
